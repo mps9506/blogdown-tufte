@@ -1,7 +1,8 @@
 <nav class="menu">
     <ul>
-    {{ range .Site.Menus.nav  }}
+    {{ range .Site.Menus.menu  }}
         <li><a href="{{ .URL | relURL }}">{{ .Pre }}{{ .Name }}</a></li>
     {{ end }}
     </ul>
+	
 </nav>
