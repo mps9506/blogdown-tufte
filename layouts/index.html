@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 <body>
+{{ partial "nav.html" . }}
 <style>
   body {
     padding-left: 0 !important;
@@ -9,8 +10,6 @@
   }
 </style>
 <div id="homepage">
-{{ partial "nav.html" . }}
-
 {{ range .Site.Pages }}
   {{if eq .Type "post" }}
     {{if eq .Title "Posts"}}
