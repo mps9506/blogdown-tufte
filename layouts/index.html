@@ -9,8 +9,7 @@
   }
 </style>
 <div id="homepage">
-{{ partial "brand.html" . }}
-{{ partial "banner.html" . }}
+{{ partial "nav.html" . }}
 
 {{ range .Site.Pages }}
   {{if eq .Type "post" }}
