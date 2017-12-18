@@ -17,7 +17,9 @@
 	<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				{{ range .Site.Menus.main  }}
-			<li><a href="{{ .URL | relURL }}">{{ .Pre }}{{ .Name }}</a></li>
+			<li><a href="{{ .URL | relURL }}">
+			      <i class="{{ .icon_pack }} {{  .icon-pack }}-{{ .icon }}"></i>
+			    </a></li>
 				{{ end }}
 			</ul>
 	</div>
