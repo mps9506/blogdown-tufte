@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
 	<div class="container-fluid">
 	<div class="navbar-header">
-	    <a clas="navbar-brand href="{{.Site.BaseURL | relURL}}">
+	    <a clas="navbar-brand" href={{.Site.BaseURL | relURL}}">
 			<span id = "blog_logo">
 			<img src="{{ .Site.Params.logo.url | relURL }}" alt="Blog Logo" style="height: 40px; width:40px">
 			</span>
