@@ -10,6 +10,7 @@
   }
 </style>
 <div id="homepage" class="pure-u1">
+<div class="posts">
 {{ range .Site.Pages }}
   {{if eq .Type "post" }}
     {{if eq .Title "Posts"}}
@@ -22,6 +23,7 @@
     {{ end  }}
   {{ end }}
 {{ end  }}
+</div>
 {{ partial "footer.html" . }}
 </div>
 </body>
