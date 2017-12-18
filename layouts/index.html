@@ -9,7 +9,8 @@
     width: 100%;
   }
 </style>
-<div id="homepage" class="pure-u1">
+<div id="homepage" class="pure-g">
+div<class="pure-u-1">
 <div class="posts">
 {{ range .Site.Pages }}
   {{if eq .Type "post" }}
@@ -25,6 +26,7 @@
 {{ end  }}
 </div>
 {{ partial "footer.html" . }}
+</div>
 </div>
 </body>
 </html>
