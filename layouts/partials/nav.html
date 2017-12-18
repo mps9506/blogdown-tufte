@@ -16,7 +16,7 @@
 	</div>
 	<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				{{ range .Site.Menus.main  }}
+				{{ range .Site.Menu.main  }}
 			<li><a href="{{ .URL | relURL }}">
 			      <i class="fa fa-{{ .Icon }}"></i>
 			    </a></li>
