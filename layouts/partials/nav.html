@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+<header class="navbar-nav flex-column flex-md-row bd-navbar" id="navbar-main">
   <a clas="navbar-brand" href="{{.Site.BaseURL | relURL}}">
     <span id = "blog_logo">
     <img src="{{ .Site.Params.logo.url | relURL }}" alt="Blog Logo" style="height: 40px; width:40px">
@@ -10,10 +10,10 @@
 	{{end}}
   </a>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav bd-navbar-nav flexrow">
 	  {{ range .Site.Menus.main  }}
 	  <li><a class="nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
 	  {{ end }}
     </ul>
   </div>
-</nav>
+</header>
