@@ -10,9 +10,9 @@
 	{{end}}
   </a>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="nav navbar-nav navbar-left">
+    <ul class="navbar-nav">
 	  {{ range .Site.Menus.main  }}
-	  <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+	  <li><a class="nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
 	  {{ end }}
     </ul>
   </div>
