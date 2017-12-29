@@ -1,27 +1,19 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
-	<div class="container-fluid">
-	<div class="navbar-header">
-	    <a clas="navbar-brand" href="{{.Site.BaseURL | relURL}}">
-			<span id = "blog_logo">
-			<img src="{{ .Site.Params.logo.url | relURL }}" alt="Blog Logo" style="height: 40px; width:40px">
-			</span>
-			{{if .IsHome}}
-			{{if .Site.Params.showtitle}}
-			<span id = "blog_title">
-				{{.Site.Title}}
-			</span>
-			{{end}}
-			{{end}}
-		</a>
-	</div>
-	<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav navbar-right">
-				{{ range .Site.Params.social  }}
-			<li><a href="{{ .url }}">
-			      <i class="fa fa-{{ .icon }}"></i>
-			    </a></li>
-				{{ end }}
-			</ul>
-	</div>
-	
+  <a clas="navbar-brand" href="{{.Site.BaseURL | relURL}}">
+    <span id = "blog_logo">
+    <img src="{{ .Site.Params.logo.url | relURL }}" alt="Blog Logo" style="height: 40px; width:40px">
+    </span>
+	{{if .IsHome}}
+	{{if .Site.Params.showtitle}}
+	<span id = "blog_title">{{.Site.Title}}</span>
+	{{end}}
+	{{end}}
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav navbar-left">
+	  {{ range .Site.Menus.main  }}
+	  <li><a href="{{ .url }}">{{ .Name }}</a></li>
+	  {{ end }}
+    </ul>
+  </div>
 </nav>
