@@ -12,14 +12,14 @@
   <div class="navbar-nav-scroll" id="navbarNav">
     <ul class="navbar-nav bd-navbar-nav flexrow">
 	  {{ range .Site.Menus.main  }}
-	  <li><a class="nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
+	  <li><a class="nav-link p-2" href="{{ .URL }}">{{ .Name }}</a></li>
 	  {{ end }}
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     {{ range .Site.Params.social }}
     <li class="navitem">
-      <a itemprop="sameAs" href="{{  .link  }}" target="_blank" rel="noopener">
+      <a class="nav-link p-2" itemprop="sameAs" href="{{  .link  }}" target="_blank" rel="noopener">
         <i class="fa fa-{{ .icon  }}"></i>
       </a>
     </li>  
