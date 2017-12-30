@@ -1,13 +1,8 @@
 <header class="navbar-nav navbar-light flex-column bd-navbar" id="navbar-main">
-  <a clas="navbar-brand" href="{{.Site.BaseURL | relURL}}">
+  <a clas="navbar-brand" href="{{  .Site.BaseURL | relURL  }}">
     <span id = "blog_logo">
-    <img src="{{ .Site.Params.logo.url | relURL }}" alt="Blog Logo" style="height: {{ .Site.Params.logo.height  }}px; width: {{  .Site.Params.logo.width  }}px">
+    <img src="{{ .Site.Params.logo.url | relURL  }}" alt="Blog Logo" style="height: {{ .Site.Params.logo.height  }}px; width: {{  .Site.Params.logo.width  }}px">
     </span>
-	{{if .IsHome}}
-	{{if .Site.Params.showtitle}}
-	<span id = "blog_title">{{.Site.Title}}</span>
-	{{end}}
-	{{end}}
   </a>
   <div class="navbar-nav flex-row" id="navbarNav">
     <ul class="navbar-nav bd-navbar-nav flex-row">
@@ -16,13 +11,4 @@
 	  {{ end }}
     </ul>
   </div>
-  <ul class="navbar-nav flex-row">
-    {{ range .Site.Params.social }}
-    <li class="nav-item">
-      <a class="nav-link p-2" itemprop="sameAs" href="{{  .link  }}" target="_blank" rel="noopener">
-        <i class="fa fa-{{ .icon  }}"></i>
-      </a>
-    </li>  
-    {{ end }}
-  </ul>
 </header>
