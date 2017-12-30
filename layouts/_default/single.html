@@ -1,9 +1,9 @@
 <!-- This is the view for each individual post -->
 {{ partial "header.html" . }}
 <body>
-{{ partial "nav.html" . }}
 <div id="layout" class="pure-g">
 <article class="pure-u-1">
+{{ partial "nav.html" . }}
 {{ partial "content.header.html" . }}
 {{ partial "toc.html" . }}
 <section>{{ .Content }}</section>

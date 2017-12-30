@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 <body>
-{{ partial "nav.html" . }}
 <div id="layout" class="pure-g">
 <article class="pure-u-1">
+{{ partial "nav.html" . }}
 <div class="posts">
 {{ range .Site.Pages }}
   {{if eq .Type "post" }}

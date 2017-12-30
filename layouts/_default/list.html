@@ -2,9 +2,9 @@
 
 <!--  This is the view that you get when you click "see all posts" -->
 <body>
-  {{ partial "nav.html" . }}
 <div id="layout" class="pure-g">
 <article class="pure-u-1">
+  {{ partial "nav.html" . }}
   {{ partial "content.header.html" . }}
   <section class="list-page">
   {{ range .Data.Pages.GroupByDate "2006" }}
