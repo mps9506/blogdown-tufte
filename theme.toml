@@ -1,16 +1,18 @@
-name = "tuftesque"
+name = "blogdown-tufte"
 license = "MIT"
-licenselink = "https://github.com/nstrayer/tuftesque/"
+licenselink = "https://github.com/mps9506/blogdown-tufte/blob/master/LICENSE.md"
 description = "Hugo/Blogdown theme heavily inspired by Tufte but customized."
-homepage = "http://michaelpaulschramm.com"
+homepage = "https://github.com/mps9506/blogdown-tufte"
 tags = ["blogdown", "tufte", "minimal"]
 features = ["math", "tufte-css", "tufte"]
-min_version = 0.15
+min_version = 0.01
 
 [author]
-  name = "Nick Strayer"
-  homepage = "http://nickstrayer.me"
+  name = "Michael Schramm"
+  homepage = "http://michaelpaulschramm.com"
 
-[params]
-   [params.logo]
-      url = "/images/banner.png"
+# If porting an existing theme
+[original]
+  name = "tuftesque"
+  homepage = "https://github.com/nstrayer/tuftesque"
+  repo = "https://github.com/nstrayer/tuftesque"
