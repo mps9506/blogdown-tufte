@@ -1,35 +1,36 @@
+<hr>
 <footer class="footer">
-	<hr>
-		<nav class="navbar-nav navbar-expand-lg navbar-light">
-		<ul class="navbar-nav text-muted">
-		    {{ range .Site.Params.social }}
-			<li class="nav-item">
-			<a class="nav-link p-2" itemprop="sameAs" href="{{  .link  }}" target="_blank" rel="noopener">
-			<i class="fa fa-{{ .icon  }} fa-2x"></i>
-			</a>
-			</li>
+	<div class="container-fluid">
+		<nav class="navbar-nav navbar-expand-sm navbar-light">
+			<ul class="navbar-nav text-muted">
+			{{ range .Site.Params.social }}
+				<li class="nav-item">
+				<a class="nav-link p-2" itemprop="sameAs" href="{{  .link  }}" target="_blank" rel="noopener">
+				<i class="fa fa-{{ .icon  }} fa-2x"></i>
+				</a>
+				</li>
 			{{ end }}
-		</ul>
+			</ul>
 		</nav>
+		<hr>
+		{{ if .Site.Params.showPoweredBy}}
+		<div class="row">
+		<p class="col-3 small">Powered by <a href="https://gohugo.io">
+		{{ partial "svg/hugo-wide.svg" .  }}</a> logo copyright &copy; Steve Francia 2013–2017</p>
+		<p class="col-8 small">Theme derived from <a href="https://github.com/shawnohare/hugo-tufte">Hugo-Tufte</a> and <a href="https://github.com/nstrayer/tuftesque">Tuftesque</a>.
+		{{ end }}
 
-  {{ if .Site.Params.showPoweredBy}}
-    <p>
-      Powered by <a href="https://gohugo.io">{{ partialCached "svg/hugo-wide.svg" . }}</a> and the
-      <a href="https://github.com/shawnohare/hugo-tufte">Tuftesque theme</a>.
-    </p>
-  {{ end }}
 
-	<div class="copyright">
-	<p>
-    {{ with .Site.Params.copyright }}
-      {{ . | safeHTML }}
-    {{ else }}
-      &copy;{{now.Format "2006"}}
-    {{ with .Site.Params.copyrightHolder }}{{ . }}{{end}}.
-    All rights reserved.
-    {{end}}
-  </p>
-</div>
+		{{ with .Site.Params.copyright }}
+		{{ . | safeHTML }}
+		{{ else }}
+		&copy; {{now.Format "2006"}}
+		{{ with .Site.Params.copyrightHolder }}{{ . }}{{end}}.
+		<a href="https://creativecommons.org/licenses/by/3.0/">Some rights reserved</a> - Please attribute properly and link back.
+		{{end}}
+		</p>
+		</div>
+    </div>
 {{ partial "footer_highlightjs" . }}
 {{ partial "footer_mathjax" . }}
 </footer>
