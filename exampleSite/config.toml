@@ -11,16 +11,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/About/"
 [[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/rstudio/blogdown"
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/rstudio"
+    name = "CV"
+    url = "/CV/"
 
 [params]
     description = "A website built through Hugo and blogdown."
+	showPoweredBy = true
+    copyrightHolder = "John Doe"
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
@@ -33,7 +32,25 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
     [params.logo]
     url = "logo.png"
-    width = 50
-    height = 50
+    width = 320
+    height = 137
     alt = "Logo"
-
+	
+	# social icons used in footer
+	# can use any font awesome icon: http://fontawesome.io/icons/
+    [[params.social]]
+    name = "GitHub"
+    icon = "github"
+    link = "https://github.com/rstudio/blogdown"
+    [[params.social]]
+    name = "Twitter"
+    icon = "twitter"
+    link = "https://twitter.com/rstudio"
+    [[params.social]]
+    name = "LinkedIn"
+    icon = "linkedin-square"
+    link = "https://www.linkedin.com/"
+    [[params.social]]
+    name = "Instagram"
+    icon = "instagram"
+    link = "https://www.instagram.com/"
